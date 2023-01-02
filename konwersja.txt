@@ -1,0 +1,37 @@
+#include <iostream>
+#include<vector>
+
+using namespace std;
+void wypisz(vector<int>tab)
+{
+    for (int i = 0; i < tab.size(); i++)
+    {
+        cout << tab[i] << '.';
+    }
+    cout << endl;
+}
+
+vector<int>konwersja(int liczba) {
+    vector<int>wynik;
+    while (liczba % 10) {
+        wynik.push_back(liczba % 10);
+        liczba /= 10;
+    }
+    return wynik;
+}
+vector<int> suma(vector<int>lk1, vector<int>lk2)
+{
+    vector<int>wynik;
+    wynik.push_back(lk1[0] + lk2[0]);
+    wynik.push_back(lk1[1] + lk2[1]);
+    wynik.push_back(lk1[2] + lk2[2]);
+    return wynik;
+}
+
+int main()
+{
+    int liczba = 123;
+    int liczba2 = 234;
+    vector<int>x = konwersja(liczba);
+    wypisz(x);
+}
