@@ -1,0 +1,29 @@
+#include <iostream>
+#include<vector>
+
+using namespace std;
+
+void rownania(double a, double b, double c) {
+    if (a == 0&&b==c)
+    {
+    cout << "NWR";
+    }
+    else if (a==0)
+    {
+        cout << "BR";
+    }
+    else
+    {
+        double x = 0;
+        x = (c - b) / a;
+        cout << x;
+    }
+}
+int main()
+{
+    double a = 0.52;
+    double b = 1.60;
+    double c = -5.44;
+    rownania(a, b, c);
+
+}
